@@ -1,0 +1,18 @@
+------------- CONCEPT -----------------
+Emailler gruplanıp en populer maillerin kimler tarafından gönderildiği, kaç kişiye ulaştığı, kişi listeleri oluşturulacak.
+Hot trends yapılacak.
+--------------------------------------------
+
+* SOAP servisler yazılacak.
+	- Mail'leri count ile getir.
+	- Kullanıcının gönderdiği mailler.
+	- Kullanıcının aldığı mailler.
+* RESTFUL servisler yazılacak. Jersey
+* SVN tamamlanacak.
+* LOG4J kullanılacak.
+* Solr search yazılacak.
+* Search servisi açılacak.
+* Hadoop ile dağıtım işi yapılacak.
+* Yeni bir eposta hesabı oluşturulup gruplar aktırılacak.
+* Emailler gruplanacak,örtüştürülecek,eşleştirilecek!***
+* ehcache'e geçilcek.

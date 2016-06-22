@@ -1,0 +1,2 @@
+* TO, CC, BCC ayrımı yok! --- Giderildi!
+* Mailler Silinmiyor. --- Giderildi!

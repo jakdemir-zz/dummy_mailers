@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>edu.jak.dummymailers</groupId>
+	<artifactId>dummymailersEar</artifactId>
+	<name>dummymailers EAR</name>
+	<parent>
+		<artifactId>dummymailers</artifactId>
+		<groupId>edu.jak.dummymailers</groupId>
+		<version>${projectVersion}</version>
+		<relativePath>../dummy_mailers/pom.xml</relativePath>
+	</parent>
+	<packaging>ear</packaging>
+	<version>${projectVersion}</version>
+	<dependencies>
+		<dependency>
+			<groupId>edu.jak.dummymailers</groupId>
+			<artifactId>dummymailersDomain</artifactId>
+			<version>${projectVersion}</version>
+			<type>jar</type>
+		</dependency>
+		<dependency>
+			<groupId>edu.jak.dummymailers</groupId>
+			<artifactId>dummymailersEjb</artifactId>
+			<version>${projectVersion}</version>
+			<type>ejb</type>
+		</dependency>
+		<dependency>
+			<groupId>edu.jak.dummymailers</groupId>
+			<artifactId>dummymailersWeb</artifactId>
+			<version>${projectVersion}</version>
+			<type>war</type>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.6</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<resources>
+			<resource>
+				<directory>${basedir}/src/main/application</directory>
+				<excludes>
+					<exclude>**/*.java</exclude>
+				</excludes>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<artifactId>maven-ear-plugin</artifactId>
+				<configuration>
+					<version>5</version>
+					<defaultJavaBundleDir>lib</defaultJavaBundleDir>
+					
+					<!--  
+					Eger olusacak ear'in versiyon isminden bagimsiz sabit olmasini istiyorsaniz finalName verin
+					
+					<finalName>projecttemplate</finalName>
+					-->
+					<modules>
+						<jarModule>
+                           <groupId>edu.jak.dummymailers</groupId>
+                           <artifactId>dummymailersDomain</artifactId>
+                        </jarModule>
+                        <ejbModule>
+                          	<groupId>edu.jak.dummymailers</groupId>
+                        	<artifactId>dummymailersEjb</artifactId>
+                           	<bundleFileName>dummymailersEjb-${projectVersion}.jar</bundleFileName>
+                        </ejbModule>
+                        <webModule>
+                           <groupId>edu.jak.dummymailers</groupId>
+                           <artifactId>dummymailersWeb</artifactId>
+                           <bundleFileName>dummymailersWeb-${projectVersion}.war</bundleFileName>
+                           <contextRoot>/dummymailers</contextRoot>
+                        </webModule>
+                     </modules>	
+					
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

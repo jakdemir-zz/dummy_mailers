@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="EJB"
+  name="dummy_mailers_ejb"
+  id="myeclipse.1218543163993"
+  j2ee-spec="5.0"
+  archive="dummy_mailers_ejb.jar" />
+

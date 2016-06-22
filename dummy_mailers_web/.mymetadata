@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="dummy_mailers_web"
+  id="myeclipse.1218609282600"
+  j2ee-spec="1.4"
+  archive="dummy_mailers_web.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

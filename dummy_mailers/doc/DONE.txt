@@ -1,0 +1,9 @@
+* Maven desteği ile JAVA EE projesi oluşturulacak.
+* Imap email client'ı oluşturulacak.
+* Mail'ler çekilip DB'ye atılacak. IMAP ile silinecek.
+** SOAP servisler yazılacak.
+	- Mail'leri email hesabından çek ve sil.
+	- Id ile Mail getirme.
+	- Mail download sırasında count belirt.
+	- TO, CC, BCC ayrımı yapıldı!
+	- Maillerin silinmesi sağlandı.

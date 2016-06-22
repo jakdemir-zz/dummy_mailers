@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project 
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>edu.jak.dummymailers</groupId>
+	<artifactId>dummymailersIntTest</artifactId>
+	<name>dummymailers Integration Test</name>
+	<parent>
+		<artifactId>dummymailers</artifactId>
+		<groupId>edu.jak.dummymailers</groupId>
+		<version>${projectVersion}</version>
+		<relativePath>../dummy_mailers/pom.xml</relativePath>
+	</parent>
+	<packaging>jar</packaging>
+	<version>${projectVersion}</version>
+	<dependencies>
+		<dependency>
+			<groupId>org.apache.openejb</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>5.0-1</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.bm</groupId>
+			<artifactId>ejb3unit</artifactId>
+			<version>1.1.0-RC1</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>edu.jak.dummymailers</groupId>
+			<artifactId>dummymailersEjb</artifactId>
+			<version>${projectVersion}</version>
+		</dependency>
+	</dependencies>
+	<repositories>
+		<repository>
+			<id>ejb3unit</id>
+			<name>Wicket repository</name>
+			<url>http://ejb3unit.sourceforge.net/maven2</url>
+		</repository>
+	</repositories>
+</project>
